@@ -37,4 +37,14 @@ public class StatsCalculator {
     public void sortData(){
         Arrays.sort(sortedValues);
     }
+
+    public double calculateMax(){
+        double max = values[0];
+        for(double num : values){
+            if(num > max){
+                max = num;
+            }
+        }
+        return max;
+    }
 }
