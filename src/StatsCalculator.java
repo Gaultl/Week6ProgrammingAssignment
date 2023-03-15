@@ -92,7 +92,7 @@ public class StatsCalculator {
      * @return returns the median of 'half', which is the desired quartile
      */
     private double calculateQuartile(double[] half){
-        double quartile = -1;
+        double quartile = -2;
         if(half.length % 2 == 0){
             quartile = (half[half.length / 2] + half[half.length / 2 - 1]) / 2.0;
         } else {
@@ -190,17 +190,18 @@ public class StatsCalculator {
      * Prints the data set as entered
      */
     public void print(){
-        System.out.println("\nYour data is: ");
+        System.out.println("Your data is: ");
         for(double value : values){
             System.out.print(value + " ");
         }
+        System.out.println();
     }
 
     /**
      * Prints the sorted data set
      */
     public void printSorted(){
-        System.out.println("\nYour sorted data is: ");
+        System.out.println("Your sorted data is: ");
         for(double value : sortedValues){
             System.out.print(value + " ");
         }
